@@ -1,0 +1,182 @@
+
+
+
+  
+  .footer {
+    background-color: rgb(178, 196, 245);
+    padding-left: 100px;
+    padding: 100px;
+    height: 350px;
+    display: grid;
+    grid-template-columns: 250px 350px 300px 310px;
+    grid-template-rows: 300px;
+    grid-template-areas: "contacto log info redes";
+  }
+  .log {
+    background-color: rgb(178, 196, 245);
+    width: 350px;
+    grid-area: log;
+    align-self: center;
+    padding-left: 50px;
+  }
+  .contacto {
+    grid-area: contacto;
+    align-self: center;
+  }
+  .info {
+    grid-area: info;
+    align-self: center;
+    padding-left: 150px;
+  }
+  .redes {
+    grid-area: redes;
+    align-self: center;
+    padding-left: 100px;
+  }
+  
+  .inicial {
+    display: grid;
+    grid-template-columns: 100px;
+    grid-template-rows: 100px 300px;
+    grid-template-areas: "frente principal";
+  }
+  
+  .principal {
+    grid-area: principal;
+    justify-content: center;
+  }
+  .frente {
+    grid-area: frente;
+    align-items: center;
+  }
+  .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10rem;
+  }
+  .integrantes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10rem;
+  }
+  @media screen and( max-width:768px) {
+    .footer {
+      grid-template-columns: 250px 350px;
+      grid-template-rows: 300px;
+    }
+  }
+  @media screen and( max-width:500px) {
+    .footer {
+      grid-template-columns: 150px 250px;
+      grid-template-rows: 200px;
+    }
+  }
+  
+@mixin caja($bgcaja){
+    background-color: $bgcaja;
+    border-radius: 5px;
+    padding: auto;
+    color: antiquewhite;}
+
+    h4{
+        color:$bgcaja1
+    }
+    p{
+        color:$azul
+    }
+    
+.elaboracion{
+    @include caja($bgcaja2)
+}
+.corte{
+    @include caja($bgcaja1)
+}
+.empanado{
+    @include caja($bgcaja3)
+}
+
+
+    $encabezados:(
+    xl:blue,
+    l:green,
+    m:red,
+    s:amarillo,
+);
+
+$xl: map-get($encabezados, xl); 
+$l: map-get($encabezados, l);
+$m : map-get($encabezados, m); 
+$s: map-get($encabezados, s);
+
+h2{
+    color:$xl;
+}
+h3{
+    color:$l;
+}
+h4{
+    color:$s;
+} 
+h6{
+    color:$m;
+} 
+
+.box{
+    width: 250%;
+    background-color: #b2c4f5;
+    padding: 20px;
+    display: flex;
+}
+.boxcard1{
+    @extend.box;
+    border:1px;
+    background-color: #63c7e6;
+}
+.boxcard2{
+    @extend.box;
+    border-radius:1px;
+    background-color: cornflowerblue;
+}
+.boxcard3{
+    @extend.box;
+    border-style: dotted;
+    background-color: cyan;
+}
+
+
+.inicio {
+    height: 20px;
+    display: grid;
+    grid-template-columns: 200px 980px 100px 200px;
+    grid-template-rows: 200px;
+    grid-template-areas: "logo nombre carro usuario";
+  }
+  .logo {
+    grid-area: logo;
+  }
+  .titulo {
+    grid-area: nombre;
+    align-self: center;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    justify-self: center;
+  }
+  .carrito {
+    grid-area: carro;
+    align-self: center;
+  }
+  .perfil {
+    grid-area: usuario;
+    align-self: center;
+  }
+  .frente {
+    margin-left: 420px;
+    width: 500px;
+  }
+  
+$bgcaja1:#8585f0;
+$bgcaja2: #7e0b6e;
+$bgcaja3:#23df42;
+$azul:#2e2ef0;
+$texto: #1b1818
